@@ -1,37 +1,8 @@
-## Welcome to GitHub Pages
+### Authy Two Factor Authentication(2FA) USING Plain PHP and JavaScript
+In this project there is a login system and also a 2FA feature using Authy API. The implementation uses curl in PHP to talk to Authy server. If the user activates 2FA, then in the next login attempt, the user will get an OTP(One time password) as an SMS and the user will use this SMS to authenticate and to login to the system. 
 
-You can use the [editor on GitHub](https://github.com/G0URAB/Authy2FA/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Getting started 
+1. The user must have a [twilio account](https://www.twilio.com/). The username and password of twilio can be used to login into [Authy](https://authy.com/). After successful login, the user must create an **app** in Authy and get an **API key** from the dashboard section.
+2. There are only two test users now, **Jon Snow** and **Bruce Wayne**. Please download the table **authy_2fa** from the database folder. There is no password for the database user **root** and name of database in this project is **github_projects**. So a database connection would look something like: $con = mysqli_connect("localhost","root","","github_projects").
+3. Please insert your own API key in **bg/authy_requests.php**.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/G0URAB/Authy2FA/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
