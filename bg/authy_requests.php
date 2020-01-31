@@ -39,11 +39,6 @@ if(isset($_POST['2fa_activate'])){
     $msg['status'] = true;
     $msg['text']= json_decode($response)->message;
     }
- else
-    {
-    $msg['status'] = false;
-    $msg['text']= json_decode($response)->message;
-    }
 }
 
 else if(isset($_POST['2fa_deactivate'])){
@@ -62,12 +57,6 @@ else if(isset($_POST['2fa_deactivate'])){
     $stmt->close();
 
     $msg['status'] = true;
-    $msg['text']= json_decode($response)->message;
-    }
- else
-    {
-    $msg['status'] = false;
-    $msg['text']= json_decode($response)->message;
     }
 
 }
@@ -77,8 +66,6 @@ else if (isset($_POST['new_otp'])){
   $authyID = isset($row['2fa_id']) ? $row['2fa_id']: "";
   $response = $authy->authySendOTP($authyID);
   $msg['status']=true; 
-  $msg['text']=json_decode($response)->message;
-
 }
 
 else if (isset($_POST['verify_otp'])){
@@ -89,16 +76,13 @@ else if (isset($_POST['verify_otp'])){
         //To check if user has performed 2FA
         $_SESSION['2fa_verified'] =true;
         $msg['status'] = true;
-        $msg['text']= json_decode($response)->message;
     }
     else
-    {
-        $_SESSION['2fa_verified'] =false;
-        $msg['status'] = false;
-        $msg['text']= json_decode($response)->message;
-    }
+     $_SESSION['2fa_verified'] =false;
+
 }
 
+$msg['text']= json_decode($response)->message;
 $conn->close();
 echo json_encode($msg);
 
