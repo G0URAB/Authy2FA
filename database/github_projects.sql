@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `authy_2fa` (
 
 INSERT INTO `authy_2fa` (`id`, `first_name`, `last_name`, `email`, `password`, `2fa_status`, `2fa_id`) VALUES
 (1, 'Jon', 'Snow', 'jon@castleblack.com', 'ygritte', 'off', NULL),
-(2, 'Bruce', 'Wayne', 'bruce@gotham.com', 'iambatman', 'on', '218794496');
+(2, 'Bruce', 'Wayne', 'bruce@gotham.com', 'iambatman', 'off', NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
