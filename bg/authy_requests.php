@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once "Authy.php";
-require_once "con.php";
+require_once "connection.php";
 
 $email = isset($_POST['email']) ? $_POST['email']: "";
 $phone = isset($_POST['phone']) ? $_POST['phone']: "";

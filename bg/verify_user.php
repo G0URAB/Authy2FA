@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once "con.php";
+require_once "connection.php";
 
 //Switch off php error reporting
 error_reporting(0);

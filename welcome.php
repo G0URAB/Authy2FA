@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "bg/con.php";
+require_once "bg/connection.php";
 
 if (isset($_POST['logout_btn']))
     unset($_SESSION['id']);
