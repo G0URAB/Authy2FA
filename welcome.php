@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "bg/con.php";
 
 if (isset($_POST['logout_btn']))
     unset($_SESSION['id']);
@@ -7,8 +8,6 @@ if (isset($_POST['logout_btn']))
 if (!isset($_SESSION['id']))
     header('location:index.html');
 
-//Make connection to database
-$conn = new mysqli("localhost", "root", "", "github_projects");
 
 //auth_2fa is the test table containing test data
 $query = mysqli_query($conn, "SELECT * from authy_2fa where id={$_SESSION['id']}");

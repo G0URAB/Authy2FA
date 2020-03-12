@@ -1,17 +1,15 @@
 <?php
 
 session_start();
+require_once "con.php";
 
 //Switch off php error reporting
 error_reporting(0);
 
-$msg = array("status" => false, "text" => "No username and password given");
+$msg = [ "status" => false, "text" => "No username and password given" ];
 
 if(isset($_POST))
 {
-
-    //Make connection to database
-    $conn = mysqli_connect("localhost", "root", "", "github_projects");
 
     if($conn)
     {

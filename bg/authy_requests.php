@@ -1,16 +1,15 @@
 <?php
 session_start();
 require_once "Authy.php";
+require_once "con.php";
 
 $email = isset($_POST['email']) ? $_POST['email']: "";
 $phone = isset($_POST['phone']) ? $_POST['phone']: "";
 $country_code = isset($_POST['country_code']) ? $_POST['country_code']: "";
 $OTP= isset($_POST['otp']) ? $_POST['otp']: "";
-$api_key = "Insert your api key";
+$api_key = "Insert your api key"; //API key can be found at Authy Dasboard
 
 $authy = new Authy($api_key,$email,$phone,$country_code);
-//Make connection to database
-$conn = new mysqli("localhost", "root", "", "github_projects");
 
 //extract auth_id
 $stmt = $conn->prepare("select 2fa_id from authy_2fa where id= ? LIMIT 1");
@@ -20,7 +19,7 @@ $result= $stmt->get_result();
 $row=$result->fetch_assoc();
 $stmt->close();
 
-$msg = array("status"=>false, "text"=>"Please provide phone number and country code");
+$msg = [ "status"=>false, "text"=>"Please provide phone number and country code" ];
 
 
 if(isset($_POST['2fa_activate'])){
