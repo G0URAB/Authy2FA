@@ -12,42 +12,45 @@
 </head>
 
 <body>
-    
-    <div class="container col-lg-6">
-        <div class="page-header">
-          <h1>User Login</h1>      
+
+    <div style="margin-top: 10%;">
+        <div class="container col-lg-6">
+            <div class="page-header">
+                <h1>User Login</h1>
+            </div>
+        </div>
+
+        <div class="container col-lg-6">
+            <form id="user_verify_form" action="javascript:void(0);">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Username</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username" name="username">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Password</span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                </div>
+                <button class="btn btn-primary" type="submit" onclick="verify_existing_user()">Anmelden</button>
+            </form>
+        </div>
+        <br><br><br>
+        <div class="container col-lg-6" style="visibility: hidden;" id="otp_box">
+            <form id="otp_form" action="javascript:void(0);">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Enter OTP</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="123456" name="otp">
+                    <a href="#" onclick="if(confirm('Are you sure?')) send_new_otp();">Resend OTP</a>
+                </div>
+                <button class="btn btn-secondary" type="submit" onclick="verify_otp()">Verify</button>
         </div>
     </div>
-    
-    <div class="container col-lg-6">
-        <form id="user_verify_form" action="javascript:void(0);">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Username</span>
-                </div>
-                <input type="text" class="form-control" placeholder="Username" name="username">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Password</span>
-                </div>
-                <input type="password" class="form-control" placeholder="Password" name="password">
-            </div>
-            <button class="btn btn-primary" type="submit" onclick="verify_existing_user()">Anmelden</button>
-        </form>
-    </div>
-    <br><br><br>
-    <div class="container col-lg-6" style="visibility: hidden;" id="otp_box">
-        <form id="otp_form" action="javascript:void(0);">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Enter OTP</span>
-                </div>
-                <input type="text" class="form-control" placeholder="123456" name="otp">
-                <a href="#" onclick="if(confirm('Are you sure?')) send_new_otp();">Resend OTP</a>
-            </div>
-            <button class="btn btn-secondary" type="submit" onclick="verify_otp()">Verify</button>
-    </div>
+
 </body>
 
 </html>
