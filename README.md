@@ -11,6 +11,6 @@ In this project there is a login system and also a 2FA feature using Authy API. 
 3. I have already provided the database called "github_projects" in the database folder. Please **import** it in your php_myadmin.
 
 ## Notes
- 1. There are only two test users now, **Jon Snow**(username: 'jon@castleblack.com', Password: 'ygritte') and **Bruce Wayne**(username: 'bruce@gotham.com', Password: 'iambatman'). 
+ 1. There are only two test users now, **Jon Snow**(username:jon@castleblack.com, Password:ygritte) and **Bruce Wayne**(username: bruce@gotham.com, Password:iambatman). 
  2. To activate 2FA, please provide your own phone number and an OTP will be sent to you which you will have to use verify yourself.
 
