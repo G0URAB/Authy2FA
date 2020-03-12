@@ -82,7 +82,10 @@ else if (isset($_POST['verify_otp'])){
 }
 
 $msg['text']= json_decode($response)->message;
+
+//close connection
 $conn->close();
+
 echo json_encode($msg);
 
 ?>

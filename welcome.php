@@ -18,6 +18,8 @@ if($row['2fa_status']=='on' && $_SESSION['2fa_verified']!=true){
     header('location:index.html');
 }
 
+//close connection
+$conn->close();
 ?>
 
 <!DOCTYPE html>

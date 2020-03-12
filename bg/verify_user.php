@@ -57,5 +57,7 @@ if(isset($_POST))
 }
 
 echo json_encode($msg);
+
+//close connection
 $conn->close();
 ?>
