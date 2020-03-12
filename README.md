@@ -7,7 +7,8 @@ In this project there is a login system and also a 2FA feature using Authy API. 
 
 ## Installation
 1. Install Wamp or Xampp. If it is Wamp then put the Authy2FA folder inside "www" folder and if it is Xampp then put the "Authy2FA" folder in the "htdocs" folder. After that the project can be run as localhost/Authy2FA.
-2. You might already have a php_myadmin with username and password and if this is the case then replace the php_myadmin credentials with yours in authy_request.php and verify_users.php in "bg" folder for database connection. I have already provided the database in the database folder.
+2. You might already have a **php_myadmin** with **username and password** and if this is the case then replace the php_myadmin credentials with yours in **authy_request.php** and **verify_users.php** in "bg" folder for database connection. 
+3. I have already provided the database called "github_projects" in the database folder. Please **import** it in your php_myadmin.
 
 ## Notes
  1. There are only two test users now, **Jon Snow**(username: 'jon@castleblack.com', Password: 'ygritte') and **Bruce Wayne**(username: 'bruce@gotham.com', Password: 'iambatman'). 
